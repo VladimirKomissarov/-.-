@@ -1,0 +1,29 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{xcolor}
+\title{Практическая работа №4}
+\author{Комиссаров Владимир группа 8871}
+\begin{document}
+\maketitle
+$Z=\frac{\pi}{6}$\\
+$X=\frac{5}{\pi 6}$
+\\
+\\
+\begin{tikzpicture}
+\draw [rounded corners=5pt,color=white,ball color=black,smooth] (2.59,5.19,3.1) circle (0.9) node {H};
+\draw [rounded corners=5pt,color=white,ball color=black,smooth] (-2.59,4.69,-1.5) circle (0.9) node {H};
+\draw [rounded corners=5pt,color=white,ball color=black,smooth] (0,0,0) circle (0.9) node {H};
+\begin{scope}[xscale=1,yscale=1]
+\draw [rounded corners=5pt,color=white,ball color=red,smooth] (-0.61,3.1,1.06) circle (2.1) node {C};
+\draw [rounded corners=5pt,color=white,ball color=black,smooth] (-2.44,2.46,3,84) circle (0.9) node {H};
+
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
