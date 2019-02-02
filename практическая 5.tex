@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}             
+\usepackage{mathtext}                 
+\usepackage[utf8]{inputenc}           
+\usepackage[english, russian]{babel}   
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{makecell}
+\author{Комаров А.В.}
+\title{Практическая работа №5}
+
+\begin{document}
+\maketitle
+Дана функция (ДНФ):
+$$F=\bar{B}C\bar{D}+\bar{AC}+BD\bar{A}$$
+
+\begin{table}[h]
+\renewcommand{\tabcolsep}{0.15cm}
+\caption{\label{TRT1} Таблица истинности.}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Аргументы} & \multicolumn{6}{|c|}{Логические операции} \\
+\hline
+\rule{0cm}{0.5cm}
+A & B & C & D & 
+\small $\bar{B}$ & 
+\small $\bar{B}C$ & 
+\small $\bar{D}$&
+\small $\bar{B}C\bar{D}$ & 
+\small $\bar{A}$ &
+\small $\bar{C}$ & 
+
+\hline
+0 & 0 &	0 &	0 &	0 &	0 &	0 &	0 &	0 &	0\\
+0 &	0 &	0 &	1 &	0 &	0 &	0 &	0 &	0 &	0\\
+0 & 0 &	1 &	0 &	0 &	0 &	0 &	0 &	0 &	0\\
+0 & 0 &	1 &	1 &	0 &	0 &	0 &	1 &	1 &	1\\
+0 & 1 &	0 &	0 &	0 &	0 &	0 &	0 &	0 &	0\\
+0 & 1 &	0 &	1 &	0 &	0 &	0 &	0 &	0 &	0\\
+0 & 1 &	1 &	0 &	0 &	1 &	1 &	0 &	1 &	1\\
+0 & 1 &	1 &	1 &	0 &	1 &	1 &	1 &	1 &	1\\
+1 & 0 &	0 &	0 &	0 &	0 &	0 &	0 &	0 &	0\\
+1 &	0 &	0 &	1 &	0 &	0 &	0 &	0 &	0 &	0\\
+1 &	0 &	1 &	0 &	0 &	0 &	0 &	0 &	0 &	0\\
+1 &	0 &	1 &	1 &	0 &	0 &	0 &	1 &	1 &	1\\
+1 &	1 &	0 &	0 &	1 &	0 &	1 &	0 &	1 &	1\\
+1 &	1 &	0 &	1 &	1 &	0 &	1 &	0 &	1 &	1\\
+1 &	1 &	1 &	0 &	1 &	1 &	1 &	0 &	1 &	1\\
+1 &	1 &	1 &	1 &	1 &	1 &	1 &	1 &	1 &	1\\
+  \hline
+\end{tabular}
+\end{table} 
+Совершенная дизъюнктивная нормальная форма (СДНФ)
+$$ F=\bar{A B C D} \land \bar{A B C D}\land\bar{A B C D} \land \bar{A B C D}\land\bar{A B C D} \land \bar{A B C D}\land\bar{A B C D} \land \bar{A B C D}$$\\
+
+
+Совершенная конъюнктивная нормальная форма (СКНФ)
+$$ F=(A \land B \land \bar{C} \land \bar{D})\lor(A \land \bar{B} \land \bar{C} \land D)\lor(\bar{A} \land B \land D \land C)\lor(\bar{A} \land B \land C \land \bar{D})\lor(\bar{A} \land B \land \bar{C} \land \bar{D})\lor(\bar{A} \land \bar{B} \land C \land D)\lor$$
+\lor(\bar{A} \land \bar{B} \land C \land \bar{D})\lor(\bar{A} \land \bar{B} \land \bar{C} \land D)
+\newpage
+\begin{table}
+\caption{\label{TRT2} Карта карно}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diaghead{\theadfont 1111111111}
+{AB}{CD}
+& 00 & 01 & 11 & 10 \\
+\hline
+00 & 1 & 1 & 0 & 1 \\
+\hline
+01 & 1 & 1 & 1 & 0 \\
+\hline
+11 & 0 & 0 & 0 & 0 \\
+\hline
+10 & 0 & 0 & 0 & 1 \\
+\hline
+\end{tabular}
+\end{table} 
+
+\end{document}
